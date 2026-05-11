@@ -6,7 +6,7 @@ const Home = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-slate-100">
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-4 text-center">
         <h1 className="mb-6 text-4xl font-extrabold text-slate-900 md:text-6xl">
-          Organize your work with Productivity App
+          Organize your work with Our Productivity App
         </h1>
 
         <p className="mb-8 max-w-2xl text-lg text-slate-600">
