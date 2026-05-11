@@ -28,7 +28,7 @@ const LoginForm = () => {
       await login(formData);
       navigate("/dashboard");
     } catch {
-
+      // error is handled in context
     }
   };
 
@@ -55,7 +55,7 @@ const LoginForm = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="sanyika@example.com"
+          placeholder="john@example.com"
           required
         />
 
