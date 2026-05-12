@@ -30,7 +30,7 @@ const TaskList = () => {
       ) : (
         <div className="grid gap-4 lg:grid-cols-2">
           {filteredTasks.map((task) => (
-            <TaskCard key={task._id} task={task} />
+            <TaskCard key={task.id} task={task} />
           ))}
         </div>
       )}

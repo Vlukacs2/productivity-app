@@ -24,7 +24,7 @@ const TaskCard = ({ task }) => {
   };
 
   const handleSave = async () => {
-    await updateTask(task._id, editData);
+    await updateTask(task.id, editData);
     setIsEditing(false);
   };
 
@@ -140,16 +140,33 @@ const TaskCard = ({ task }) => {
           Edit
         </Button>
 
-        <Button
+
+
+       {/* <Button
           variant="success"
-          onClick={() => updateTask(task._id, { status: "done" })}
+          onClick={() => updateTask(task.id, { status: "done" })}
         >
           Mark done
         </Button>
 
-        <Button variant="danger" onClick={() => deleteTask(task._id)}>
+        <Button
+          variant="danger"
+          onClick={() => deleteTask(task.id)}
+        >
           Delete
+        </Button> */}
+
+
+         <Button
+                  variant="success"
+                  onClick={() => updateTask(task.id, { status: "done" })}
+                >
+                  Mark done
         </Button>
+
+        <Button variant="danger" onClick={() => deleteTask(task.id)}>
+                  Delete
+       </Button>
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ export const TaskProvider = ({ children }) => {
 
       setTasks((prevTasks) =>
         prevTasks.map((task) =>
-          task._id === taskId ? updatedTask : task
+          task.id === taskId ? updatedTask : task
         )
       );
     } catch (error) {
@@ -61,7 +61,7 @@ export const TaskProvider = ({ children }) => {
       await taskService.deleteTask(taskId);
 
       setTasks((prevTasks) =>
-        prevTasks.filter((task) => task._id !== taskId)
+        prevTasks.filter((task) => task.id !== taskId)
       );
     } catch (error) {
       setError(error.response?.data?.message || "Could not delete task");
